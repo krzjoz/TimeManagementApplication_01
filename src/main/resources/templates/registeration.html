@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>ToDoList</title>
+	<meta name="description" content="Blog o skokach narciarskich">
+	<meta name="keywords" content="skoki narciarskie, skoczkowie, wyniki">
+	<meta name="author" content="Jan Kowalski">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<style>
+body {
+ background-image: url("img/MainPage.png");
+ background-color: #cccccc;
+}
+</style>
+<body>
+
+	<header>
+	
+		<nav class="navbar navbar-dark bg-jumpers navbar-expand-lg">
+		
+			<a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-1 align-bottom" alt=""> ToDoList</a>
+		
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse" id="mainmenu">
+			
+				<ul class="navbar-nav mr-auto">
+				
+					<li class="nav-item active">
+						<a class="nav-link" href="#"> Start </a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"> Lists </a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="#"> Create List </a>
+					</li>
+					<ul>
+    
+				
+				</ul>
+			
+				<form class="form-inline">
+				
+					<input class="form-control mr-1" type="search" placeholder="Wyszukaj" aria-label="Wyszukaj">
+					<button class="btn btn-light" type="submit">Znajdź</button>
+				
+				</form>
+			
+			</div>
+		
+		</nav>
+	
+	</header>
+	
+	<main>
+		
+	
+		<div class="container">
+<div class="row justify-content-center mt-5">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">Register</div>
+                            <div class="card-body">
+
+                                <form class="form-horizontal" method="post" action="#">
+
+                                    <div class="form-group">
+                                        <label for="name" class="cols-sm-2 control-label form-">Your Name</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                                    </div>
+                                    <div class="login-register">
+                                        <a href="index.php">Login</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+</div>
+	</main>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>
